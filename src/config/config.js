@@ -1,13 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-
-const config = {
-  api: {
+export const config = {
+    db_url: process.env.DB_URL,
     port: process.env.PORT,
-  },
-  db: {
-    url: process.env.MONGO_CONNECTION,
-  },
+    jwt_secret: process.env.JWT_SECRET
 };
 
-export default config;
+console.log(config.db_url);

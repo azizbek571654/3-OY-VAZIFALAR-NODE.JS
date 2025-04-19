@@ -1,15 +1,13 @@
-import { connect } from "mongoose";
-import config from "../config/index.js";
+import mongoose from "mongoose";
+import { config } from "../config/config.js";
 
-
-export async function mongoConnect() {
-  try {
-    await connect(config.db.url);
-    console.log("MongoDB ulandi ✅");
-  } catch (error) {
-    console.log("Xatolik:", error);
-  }
+export const connectionDB = async () => {
+    try {
+         await mongoose.connect(config.db_url);
+        console.log("Database connected");
+    } catch (error) {
+        console.log("connected failed");
+        console.log(error);
+        process.exit(1)
+    }
 }
-
-
-export default mongoConnect;
