@@ -1,0 +1,5 @@
+export * from "./admin.validation.js"
+export * from "./genres.validation.js"
+export * from "./movies.validation.js"
+export * from "./user.validation.js"
+export * from "./review.validator.js"
