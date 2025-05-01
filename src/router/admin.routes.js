@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { AdminController } from "../controller/index.js"
 import {jwtAuthDuard,SupperAdminGuard,SelfGuard,} from "../middleware/index.js";
+import { logger } from "../logger.js";
 
 const AdminRouter = Router();
 const conteroller = new AdminController();

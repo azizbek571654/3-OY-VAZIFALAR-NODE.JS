@@ -2,6 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import { connectionDB } from "./db/index.js";
 import cookieParser from "cookie-parser";
+import { logger } from "./logger.js";
 import {
   AdminRouter,
   genrerouter,
@@ -15,6 +16,7 @@ config();
 const app = express();
 const PORT = +process.env.PORT;
 
+app.use(logger)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
