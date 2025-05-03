@@ -1,0 +1,5 @@
+export * from './Admin.controller.js';
+export * from './genres.controller.js';
+export * from './movies.controller.js';
+export * from './user.controller.js';
+export * from './reviews.controller.js';
